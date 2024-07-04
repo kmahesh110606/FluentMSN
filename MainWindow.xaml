@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window
+    x:Class="FluentMSN.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:FluentMSN"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
+    Title="Microsoft News">
+    <Window.SystemBackdrop>
+        <MicaBackdrop Kind="Base"/>
+    </Window.SystemBackdrop>
+    <Grid>
+        <TextBlock Text="Microsoft News" Margin="30, 8" FontSize="16" FontWeight="Bold" FontFamily="Segoe UI Variable Small"/>
+        <muxc:NavigationView x:Name="Nav"
+                             InfoBarPanel.VerticalOrientationMargin="10"
+                             ExpandedModeThresholdWidth="64"
+                             IsTitleBarAutoPaddingEnabled="True" 
+                             IsPaneToggleButtonVisible="False" 
+                             IsPaneOpen="False"
+                             CompactPaneLength="64"
+                             Margin="0 40 0 0"
+                             IsBackButtonVisible="Collapsed"
+                             IsSettingsVisible="False">
+            <Frame x:Name="ContentFrame"/>
+            <muxc:NavigationView.MenuItems>
+                <muxc:NavigationViewItem MinHeight="60" MinWidth="64" Tapped="HomeClick">
+                    <StackPanel Spacing="6" Padding="-5">
+                        <FontIcon x:Name="Homei" Glyph="&#xE80F;" HorizontalAlignment="Center"/>
+                        <TextBlock x:Name="Homet" Text="Home" FontSize="10" HorizontalAlignment="Center"/>
+                    </StackPanel>
+                </muxc:NavigationViewItem>
+                <muxc:NavigationViewItem MinHeight="60" MinWidth="64" Tapped="VidClick" >
+                    <StackPanel Spacing="6" Padding="-5">
+                        <FontIcon x:Name="Vidi" Glyph="&#xE768;" HorizontalAlignment="Center"/>
+                        <TextBlock x:Name="Vidt" Text="Videos" FontSize="10" HorizontalAlignment="Center"/>
+                    </StackPanel>
+                </muxc:NavigationViewItem>
+                <muxc:NavigationViewItem MinHeight="60" MinWidth="64" Tapped="IntClick">
+                    <StackPanel Spacing="6" Padding="-5">
+                        <FontIcon x:Name="Inti" Glyph="&#xE734;" HorizontalAlignment="Center"/>
+                        <TextBlock x:Name="Intt" Text="Interests" FontSize="10" HorizontalAlignment="Center"/>
+                    </StackPanel>
+                </muxc:NavigationViewItem>
+            </muxc:NavigationView.MenuItems>
+            <muxc:NavigationView.FooterMenuItems>
+                <muxc:NavigationViewItem MinHeight="60" MinWidth="64" Tapped="FdClick">
+                    <StackPanel Spacing="6" Padding="-5">
+                        <FontIcon x:Name="Fdi" Glyph="&#xED15;" HorizontalAlignment="Center"/>
+                        <TextBlock x:Name="Fdt" Text="Feedback" FontSize="10" HorizontalAlignment="Center"/>
+                    </StackPanel>
+                </muxc:NavigationViewItem>
+                <muxc:NavigationViewItem MinHeight="60" MinWidth="64" Tapped="StgClick">
+                    <StackPanel Spacing="6" Padding="-5">
+                        <FontIcon x:Name="Stgi" Glyph="&#xE713;" HorizontalAlignment="Center"/>
+                        <TextBlock x:Name="Stgt" Text="Settings" FontSize="10" HorizontalAlignment="Center"/>
+                    </StackPanel>
+                </muxc:NavigationViewItem>
+            </muxc:NavigationView.FooterMenuItems>
+        </muxc:NavigationView>
+    </Grid>
+</Window>

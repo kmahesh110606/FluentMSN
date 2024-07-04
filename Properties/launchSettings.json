@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "FluentMSN (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "FluentMSN (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
