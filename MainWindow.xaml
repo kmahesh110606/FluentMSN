@@ -13,7 +13,7 @@
         <MicaBackdrop Kind="Base"/>
     </Window.SystemBackdrop>
     <Grid>
-        <TextBlock Text="Microsoft News" Margin="30, 8" FontSize="16" FontWeight="Bold" FontFamily="Segoe UI Variable Small"/>
+        <TextBlock Text="FluentMSN" Margin="30, 8" FontSize="16" FontWeight="Bold" FontFamily="Segoe UI Variable Small"/>
         <muxc:NavigationView x:Name="Nav"
                              InfoBarPanel.VerticalOrientationMargin="10"
                              ExpandedModeThresholdWidth="64"
